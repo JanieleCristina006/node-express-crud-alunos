@@ -87,6 +87,6 @@ app.get('/deletar/:id', (req, res) => {
     res.redirect('/alunos')
 })
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log('Servidor rodando...')
 })
