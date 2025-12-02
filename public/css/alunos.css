@@ -1,0 +1,130 @@
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;      
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.08);
+  text-align: center;
+  box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container > a {
+  display: inline-block;
+  margin: 0 10px 22px 10px;
+  padding: 10px 16px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.container > a:hover {
+  background: #3b38c2;
+}
+
+
+.container h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+
+.lista-alunos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.aluno-item {
+  background: #f7f7f7;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left: 4px solid #4f46e5;
+  transition: 0.2s;
+}
+
+.aluno-item:hover {
+  background: #ededed;
+  transform: scale(1.01);
+}
+
+/* Nome */
+.nome {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Telefone & Email */
+.linha-info {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Texto quando não há alunos */
+.nenhum {
+  color: #777;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Botões de ações */
+.acoes {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.btn.editar {
+  background: #2563eb;
+}
+
+.btn.editar:hover {
+  background: #1e4ecb;
+}
+
+.btn.excluir {
+  background: #dc2626;
+}
+
+.btn.excluir:hover {
+  background: #b91c1c;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+  }
+
+  .aluno-item {
+    padding: 12px;
+  }
+
+  .nome {
+    font-size: 16px;
+  }
+}

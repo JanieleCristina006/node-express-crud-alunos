@@ -1,0 +1,199 @@
+/* ======== BASE DA PÁGINA ======== */
+
+
+/* ======== CONTAINER ======== */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======== LINKS PRINCIPAIS (voltar / cadastrar) ======== */
+.container > a {
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    background: #1e3a8a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.container > a:hover {
+    background: #162c66;
+}
+
+.form-card > a {
+  display: inline-block;
+  margin: 0 10px 22px 10px;
+  padding: 10px 16px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.form-card > a:hover {
+  background: #3b38c2;
+}
+
+/* ======== TÍTULO ======== */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+}
+
+/* ======== LISTA DE ALUNOS ======== */
+.lista-alunos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aluno-item {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.nome {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.linha-info {
+    display: block;
+    margin-top: 4px;
+    color: #333;
+}
+
+/* ======== BOTÕES DE AÇÃO ======== */
+.acoes {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* Editar */
+.btn.editar {
+    background: #2563eb;
+}
+
+.btn.editar:hover {
+    background: #1d4ed8;
+}
+
+/* Excluir */
+.btn.excluir {
+    background: #dc2626;
+}
+
+.btn.excluir:hover {
+    background: #b91c1c;
+}
+
+/* ======== FORMULÁRIO (cadastrar / editar) ======== */
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.formulario .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.campo input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+}
+
+/* Botão salvar */
+.btn.salvar {
+    width: 100%;
+    padding: 14px;
+    background: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn.salvar:hover {
+    background: #162c66;
+}
+
+/* ======== NENHUM ALUNO ======== */
+.nenhum {
+    text-align: center;
+    color: #555;
+    margin-top: 30px;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 480px) {
+    .form-card {
+        padding: 25px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .nome {
+        font-size: 18px;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
