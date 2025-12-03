@@ -1,0 +1,56 @@
+/* ======== FOOTER ======== */
+.footer {
+    width: 100%;
+    background: #1e3a8a;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-top: auto;   /* empurra o footer para o fundo */
+}
+
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #a5b4fc;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .footer h1 {
+        font-size: 20px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+}

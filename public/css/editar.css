@@ -1,28 +1,42 @@
+/* Wrapper que centraliza tudo na tela */
+.page-wrapper-editar {
+  width: 100%;
+  min-height: calc(100vh - 160px); /* ajuste conforme header/footer */
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6; /* opcional */
+}
 
 /* Container */
 .container {
-    width: 90%;
-    max-width: 600px;
-    padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Card */
 .form-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* Botão Voltar (mesmo estilo bonito) */
 .form-card > a {
   display: inline-block;
-  margin: 0 10px 22px 10px;
-  padding: 10px 16px;
+  margin: 0 0 22px 0;
+  padding: 10px 22px;
   background: #4f46e5;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 999px;
   transition: 0.25s;
 }
 
@@ -32,64 +46,69 @@
 
 /* Título */
 .titulo {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #1e3a8a;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1e3a8a;
 }
 
 /* Campos */
 .formulario .campo {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .campo label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
 }
 
 .campo input {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #bbb;
-    font-size: 15px;
-    outline: none;
-    transition: border 0.3s, box-shadow 0.3s;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .campo input:focus {
-    border-color: #1e3a8a;
-    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
 }
 
 /* Botão salvar */
 .btn.salvar {
-    width: 100%;
-    padding: 14px;
-    background: #1e3a8a;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 100%;
+  padding: 14px;
+  background: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn.salvar:hover {
-    background: #162c66;
+  background: #162c66;
+  box-shadow: 0 6px 16px rgba(22, 44, 102, 0.35);
 }
 
 /* Responsivo */
 @media (max-width: 480px) {
-    .form-card {
-        padding: 25px;
-    }
+  .page-wrapper-editar {
+    padding: 10px 0;
+  }
 
-    .titulo {
-        font-size: 24px;
-    }
+  .form-card {
+    padding: 25px 18px;
+  }
+
+  .titulo {
+    font-size: 24px;
+  }
 }

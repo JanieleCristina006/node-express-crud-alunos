@@ -6,6 +6,7 @@
     
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
 
 
     {{#if css}}
@@ -19,5 +20,17 @@
 <body>
     {{> header}}
     {{{body}}}
+    {{> footer}}
 </body>
 </html>
+
+<style>
+    .page-content {
+    flex: 1;                 /* faz o conteúdo ocupar o espaço e empurrar o footer */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centraliza o .container */
+    padding: 20px 0;
+}
+
+</style>

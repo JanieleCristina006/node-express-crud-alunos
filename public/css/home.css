@@ -1,12 +1,18 @@
-
-
 /* Container central do conteúdo */
 .container {
     font-family: Arial, Helvetica, sans-serif;
-    width: 90%;
+    width: 100%;
     max-width: 800px;
+    margin: 0 auto;              /* centraliza no eixo horizontal em telas grandes */
     padding: 20px;
-    margin: 40px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-height: calc(100vh - 160px);
+    box-sizing: border-box;
 }
 
 /* Card elegante */
@@ -16,6 +22,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     text-align: center;
+    width: 100%;                 /* ocupa 100% do espaço disponível */
 }
 
 /* Título */
@@ -74,9 +81,14 @@
 }
 
 /* Responsivo */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .container {
+        min-height: calc(100vh - 120px);  /* um pouco menos de altura, se o header for menor em mobile */
+        padding: 16px;
+    }
+
     .card {
-        padding: 25px;
+        padding: 24px;
     }
 
     .titulo {
@@ -85,5 +97,17 @@
 
     .subtitulo {
         font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .botoes {
+        flex-direction: column;      /* botões em coluna no mobile */
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;                /* botão ocupa a largura toda */
+        max-width: 320px;           /* mas não passa disso */
+        margin: 0 auto;
     }
 }

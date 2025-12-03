@@ -1,125 +1,54 @@
 /* ======== BASE DA PÁGINA ======== */
 
-
 /* ======== CONTAINER ======== */
 .container {
     width: 100%;
     max-width: 600px;
     padding: 20px;
-     font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Centralização vertical e horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Altura total da tela descontando a altura do header (ajuste se necessário) */
+    
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* ======== LINKS PRINCIPAIS (voltar / cadastrar) ======== */
-.container > a {
-    display: inline-block;
-    margin-right: 12px;
-    margin-bottom: 20px;
-    padding: 10px 16px;
-    background: #1e3a8a;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.container > a:hover {
-    background: #162c66;
-}
-
+.container > a,
 .form-card > a {
-  display: inline-block;
-  margin: 0 10px 22px 10px;
-  padding: 10px 16px;
-  background: #4f46e5;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.25s;
-}
-
-.form-card > a:hover {
-  background: #3b38c2;
-}
-
-/* ======== TÍTULO ======== */
-h1 {
-    text-align: center;
-    color: #1e3a8a;
-    margin-bottom: 25px;
-}
-
-/* ======== LISTA DE ALUNOS ======== */
-.lista-alunos {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.aluno-item {
-    background: #ffffff;
-    padding: 18px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.nome {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    color: #1e3a8a;
-}
-
-.linha-info {
-    display: block;
-    margin-top: 4px;
-    color: #333;
-}
-
-/* ======== BOTÕES DE AÇÃO ======== */
-.acoes {
-    margin-top: 12px;
-    display: flex;
-    gap: 12px;
-}
-
-.btn {
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px 22px 0;
+    padding: 10px 16px;
+    background: #4f46e5;
     color: #fff;
-    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.25s;
 }
 
-/* Editar */
-.btn.editar {
-    background: #2563eb;
+.container > a:hover,
+.form-card > a:hover {
+    background: #3b38c2;
 }
 
-.btn.editar:hover {
-    background: #1d4ed8;
-}
-
-/* Excluir */
-.btn.excluir {
-    background: #dc2626;
-}
-
-.btn.excluir:hover {
-    background: #b91c1c;
-}
-
-/* ======== FORMULÁRIO (cadastrar / editar) ======== */
+/* ======== FORM-CARD ======== */
 .form-card {
     background: #ffffff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* ======== TÍTULO ======== */
 .titulo {
     text-align: center;
     font-size: 28px;
@@ -127,6 +56,7 @@ h1 {
     color: #1e3a8a;
 }
 
+/* ======== FORMULÁRIO ======== */
 .formulario .campo {
     display: flex;
     flex-direction: column;
@@ -153,7 +83,7 @@ h1 {
     box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
 }
 
-/* Botão salvar */
+/* ======== BOTÃO SALVAR ======== */
 .btn.salvar {
     width: 100%;
     padding: 14px;
@@ -171,13 +101,6 @@ h1 {
     background: #162c66;
 }
 
-/* ======== NENHUM ALUNO ======== */
-.nenhum {
-    text-align: center;
-    color: #555;
-    margin-top: 30px;
-}
-
 /* ======== RESPONSIVO ======== */
 @media (max-width: 480px) {
     .form-card {
@@ -186,14 +109,5 @@ h1 {
 
     .titulo {
         font-size: 24px;
-    }
-
-    .nome {
-        font-size: 18px;
-    }
-
-    .acoes {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }

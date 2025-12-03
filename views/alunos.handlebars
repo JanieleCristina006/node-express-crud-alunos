@@ -1,27 +1,32 @@
-
-
-<div class="container">
-    <a href="/">Voltar</a>
-    {{!-- <a href="/cadastrar">Cadastrar ALuno</a> --}}
-    <h1>Lista de Alunos :)</h1>
+<div class="page-wrapper">
+  <div class="container">
+    <div class="topo-card">
+      <a href="/" class="btn-voltar">Voltar</a>
+    </div>
 
     {{#if dados.length}}
-        <ul class="lista-alunos">
-            {{#each dados}}
-                <li class="aluno-item">
-                    <span class="nome">{{nome}}</span>
-                    <span class="linha-info">{{telefone}}</span>
-                    <span class="linha-info">{{email}}</span>
+      <h1>Lista de Alunos ({{dados.length}})</h1>
 
-                    <div class="acoes">
-                        <a class="btn editar" href="/editar/{{id}}">Editar</a>
-                        <a class="btn excluir" href="/deletar/{{id}}">Excluir</a>
-                    </div>
-                </li>
-            {{/each}}
-        </ul>
-         <a href="/cadastrar">Cadastrar novo ALuno</a>
+      <ul class="lista-alunos">
+        {{#each dados}}
+          <li class="aluno-item">
+            <span class="nome">{{nome}}</span>
+            <span class="linha-info">{{telefone}}</span>
+            <span class="linha-info">{{email}}</span>
+
+            <div class="acoes">
+              <a class="btn editar" href="/editar/{{id}}">Editar</a>
+              <a class="btn excluir" href="/deletar/{{id}}">Excluir</a>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+
+      <a href="/cadastrar" class="btn-voltar">Cadastrar novo Aluno</a>
     {{else}}
-        <p class="nenhum">Nenhum aluno cadastrado.</p>
+      <h1>Lista de Alunos</h1>
+      <p class="nenhum">Nenhum aluno cadastrado.</p>
+      <a href="/cadastrar" class="btn-voltar">Cadastrar novo Aluno</a>
     {{/if}}
+  </div>
 </div>
