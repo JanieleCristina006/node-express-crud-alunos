@@ -5,6 +5,8 @@ Construída com **Node.js**, **Express**, **MySQL** e **Handlebars** como engine
 
 Hospedado em Render (backend) + Railway (MySQL).
 
+👉 **Acesse o projeto online:**  
+https://node-express-crud-alunos.onrender.com/ 
 
 ## 🚀 Funcionalidades
 
